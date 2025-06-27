@@ -1,0 +1,28 @@
+<div class="container" [formGroup]="formGroup">
+  <h1>
+    {{currentUrl === 'create-main-topic' ? 'CREATE_NEW_TOPIC.TITLE' :
+    'CREATE_SUB_TOPIC.TITLE' | transloco}}
+  </h1>
+
+  <div class="input-container">
+    <div>
+      <p>title:</p>
+      <app-input
+        [control]="formGroup.controls.title"
+        [icon]="faT"
+        [placeholder]="'Gimme a title'"
+      ></app-input>
+    </div>
+
+    <div>
+      <p>description:</p>
+      <app-input
+        [control]="formGroup.controls.description"
+        [icon]="faPen"
+        [placeholder]="'Gimme a description'"
+      ></app-input>
+    </div>
+  </div>
+
+  <button (click)="saveMainCategory()">Save</button>
+</div>

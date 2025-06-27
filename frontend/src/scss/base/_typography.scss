@@ -1,0 +1,113 @@
+// Typography
+@use "../abstracts/variables" as *;
+@use "../layout/breakpoints" as *;
+
+body {
+  font-family: $font-family;
+
+  &.scroll-disabled {
+    overflow-y: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-1st;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 48px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 40px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: 40px;
+  font-weight: 400;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 37px;
+  }
+}
+
+h3 {
+  font-size: 26px;
+  letter-spacing: 0;
+  line-height: 41px;
+  font-weight: 400;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 28px;
+  font-weight: 400;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 22px;
+  }
+}
+
+h5 {
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 24px;
+  font-weight: 400;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 21px;
+  }
+}
+
+h6 {
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+p,
+li {
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 25px;
+}
+
+.page-title {
+  letter-spacing: 0;
+  line-height: 40px;
+  font-weight: 400;
+  font-size: 38px;
+  margin-bottom: 30px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 37px;
+  }
+}

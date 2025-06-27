@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="container">
+  <app-forum-nav></app-forum-nav>
+  <div class="content-container">
+    <router-outlet></router-outlet>
+    <div class="another-information-container">
+      @if(isQuestionDetail()) {
+      <app-question-data></app-question-data>
+      }
+      <app-action-button></app-action-button>
+      <app-event></app-event>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

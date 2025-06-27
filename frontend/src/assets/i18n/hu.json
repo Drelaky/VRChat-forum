@@ -1,0 +1,74 @@
+{
+  "HOME": {
+    "TITLE": "Magyar VrChat közösség",
+    "DESCRIPTION": "Kérdezz bátran, ismerd meg a VRChat-et, és kapj választ minden VRChat-tel kapcsolatos kérdésedre!",
+    "INPUT_PLACEHOLDER": "Keress vagy tedd fel a kérdésed",
+    "DATA_TOPIC": "Kategóriák",
+    "DATA_ANSWER": "Válaszok",
+    "DATA_REGISTERED_USERS": "Regisztrált felhasználók"
+  },
+  "HEADER": {
+    "LOGIN_BUTTON": "Bejelentkezés",
+    "LOGOUT_BUTTON": "Kijelentkezés"
+  },
+  "LOGIN": {
+    "TITLE": "Bejelentkezés",
+    "LOGIN_BUTTON": "Bejelentkezés",
+    "LOGIN_EMAIL_PLACEHOLDER": "Email cím",
+    "LOGIN_PASSWORD_PLACEHOLDER": "Jelszó",
+    "LOGIN_REGISTER_LINK": "Regisztráció",
+    "LOGIN_QUESTION": "Nem vagy még tag? "
+  },
+  "REGISTER": {
+    "TITLE": "Regisztráció",
+    "REGISTER_BUTTON": "Regisztráció",
+    "REGISTER_EMAIL_PLACEHOLDER": "Email cím",
+    "REGISTER_PASSWORD_PLACEHOLDER": "Jelszó",
+    "REGISTER_CONFIRM_PASSWORD_PLACEHOLDER": "Jelszó megerősítése",
+    "REGISTER_LOGIN_LINK": "Bejelentkezés",
+    "REGISTER_QUESTION": "Már van fiókod? "
+  },
+  "INPUT_ERRORS": {
+    "REQUIRED": "Ez a mező kötelező.",
+    "INVALID_EMAIL": "Kérjük, adjon meg egy érvényes email címet.",
+    "PASSWORD": "A jelszónak legalább 6 karakter hosszúnak kell lennie.",
+    "CONFIRM_PASSWORD": "A jelszó megerősítése nem egyezik.",
+    "MINLENGTH": "A mező legalább 8 karakter hosszú kell legyen."
+  },
+  "BREADCRUMBS": {
+    "BREADCRUMBS.HOME": "Kezdőlap",
+    "BREADCRUMBS.FORUM": "Fórum",
+    "BREADCRUMBS.SEARCH": "Keresés"
+  },
+  "FORUM_HEADER": {
+    "FORUM_SEARCH_PLACEHOLDER": "Keresés a közösségben",
+    "FORUM_LAST_ACTIVITY_BUTTON_TITLE": "Legutóbbi tevékenységek"
+  },
+  "FOOTER": {
+    "FOOTER_SUPPORT": {
+      "TITLE": "Segítség",
+      "ACTIONS": {
+        "CONTACT_US": "Elérhetőség"
+      }
+    },
+    "FOOTER_RESOURCES": {
+      "TITLE": "Erőforrások",
+      "ACTIONS": {
+        "TERMS_OF_SERVICE": "Szolgáltatási feltételek",
+        "PRIVACY_POLICY": "Adatvédelmi irányelvek"
+      }
+    }
+  },
+  "EVENTS": {
+    "TITLE": "Esemény naptár",
+    "LOAD_MORE_EVENT_BUTTON_TITLE": "Több esemény betöltése."
+  },
+  "FORUM_MAIN_PAGE": {
+    "TITLE": "Fórum"
+  },
+  "FORUM_ACTIONS": {
+    "ASK_YOUR_QUESTION_BUTTON": "Tedd fel a kérdésed",
+    "CREATE_NEW_TOPIC_BUTTON": "Új téma létrehozása",
+    "CREATE_NEW_SUB_TOPIC": "Új mellék téma létrehozása"
+  }
+}

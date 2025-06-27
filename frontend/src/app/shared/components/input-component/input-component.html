@@ -1,0 +1,14 @@
+<div class="group">
+  @if(icon) {
+  <fa-icon class="icon" [icon]="icon"></fa-icon>
+  }
+  <input
+    class="input"
+    [type]="type"
+    [placeholder]="placeholder"
+    [formControl]="control"
+  />
+</div>
+@if(control.errors && control.touched) {
+<app-input-error-component [errors]="inputErrors"></app-input-error-component>
+}

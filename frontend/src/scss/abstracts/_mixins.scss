@@ -1,0 +1,108 @@
+@use "sass:map";
+
+// Vertical center
+@mixin center-vertically {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Placeholders
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+// Display block icon
+@mixin icon($name) {
+  display: inline-block;
+  min-width: 5px;
+  min-height: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url($images-path + $name);
+}
+
+// Background image
+@mixin img($file) {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url($images-path + $file);
+}
+
+// IE10 IE11 only
+@mixin ieonly() {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+// Firefox only
+@mixin ffonly() {
+  @-moz-document url-prefix() {
+    @content;
+  }
+}
+
+// DOM element with fixed ratio - 100% width
+@mixin imgRatio($x, $y) {
+  display: block;
+  width: 100%;
+  padding-top: ($y/$x) * 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: $grey-9;
+}
+
+@mixin with-body-style-links {
+  a {
+    text-decoration: underline;
+  }
+}
+
+// theme mixin
+@mixin theme($theme) {
+  background-color: map.get($theme, background);
+  color: map.get($theme, text);
+
+  .card {
+    background-color: map.get($theme, card-bg);
+    border: 1px solid map.get($theme, border);
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: map.get($theme, heading);
+  }
+
+  button {
+    background-color: map.get($theme, button-bg);
+    color: map.get($theme, button-text);
+
+    &:hover {
+      background-color: map.get($theme, accent);
+      color: white;
+    }
+  }
+}

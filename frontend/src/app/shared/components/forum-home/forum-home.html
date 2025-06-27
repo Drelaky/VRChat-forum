@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="forum-category-container">
+    <h1>{{'FORUM_MAIN_PAGE.TITLE' | transloco }}</h1>
+    <div class="forum-category">
+      @for (topic of topics; track $index) {
+      <div class="category" (click)="goToTopic(topic)">
+        <h2>{{ topic.title }}</h2>
+        <fa-icon [icon]="faArrowRight"></fa-icon>
+      </div>
+      }
+    </div>
+  </div>
+  <app-question-list-component></app-question-list-component>
+</div>

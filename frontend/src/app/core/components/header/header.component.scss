@@ -1,0 +1,35 @@
+@use "shared" as *;
+
+:host {
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+
+  &.main-page {
+    background: $forum-header-background;
+  }
+
+  img {
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .button-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+
+    .language-change-button {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.wrapper {
+  width: 1320px;
+  margin: 0 auto;
+  max-width: calc(100% - 30px);
+  margin-block: 30px;
+
+  .container {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+
+    app-breadcrumbs-component {
+      flex-grow: 1;
+    }
+
+    .forum-action-container {
+      display: flex;
+      gap: 30px;
+    }
+
+    .last-activity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    app-input {
+      width: 260px;
+    }
+  }
+}

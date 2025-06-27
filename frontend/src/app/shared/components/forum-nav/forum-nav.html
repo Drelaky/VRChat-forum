@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div class="container">
+    <app-breadcrumbs-component></app-breadcrumbs-component>
+    <div class="forum-action-container">
+      <div class="last-activity">
+        <fa-icon [icon]="faNewspaper"></fa-icon>
+        <p>{{'FORUM_HEADER.FORUM_LAST_ACTIVITY_BUTTON_TITLE' | transloco}}</p>
+      </div>
+      @if(!isSearchPage()) {
+      <app-input
+        [placeholder]="'FORUM_HEADER.FORUM_SEARCH_PLACEHOLDER' | transloco"
+        [icon]="iconSearch"
+        [control]="searchControl"
+        (keydown.enter)="searchForum()"
+      ></app-input>
+      }
+    </div>
+  </div>
+</div>

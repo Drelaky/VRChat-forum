@@ -1,0 +1,35 @@
+<div class="container">
+  @for (button of buttons; track $index) {
+  @if(!button.deniedUrl.includes(currentUrl)) {
+  <button *ngxPermissionsOnly="button.permission" [routerLink]="button.url">
+    {{button.title | transloco }}
+  </button>
+
+  } } @switch (urlLogic) { @case (2) {
+  <button
+    *ngxPermissionsOnly="permissions.CREATE_MAINCATEGORY"
+    [routerLink]="['/', 'forum', 'create-main-topic']"
+  >
+    {{"FORUM_ACTIONS.CREATE_NEW_TOPIC_BUTTON" | transloco }}
+  </button>
+  } @case (3) { @if(currentUrl !== 'create-main-topic') {
+  <button
+    *ngxPermissionsOnly="permissions.CREATE_ALTCATEGORY"
+    [routerLink]="['/', 'forum', currentUrl,'create-sub-topic']"
+  >
+    {{"FORUM_ACTIONS.CREATE_NEW_SUB_TOPIC" | transloco }}
+  </button>
+  <button *ngxPermissionsOnly="permissions.CREATE_MAINCATEGORY">
+    {{"FORUM_ACTIONS.EDIT_MAIN_TOPIC" | transloco }}
+  </button>
+  } } @case (4) {
+  <button *ngxPermissionsOnly="permissions.CREATE_MAINCATEGORY">
+    {{"FORUM_ACTIONS.EDIT_SUB_TOPIC" | transloco }}
+  </button>
+  } @case (5) {
+  <button *ngxPermissionsOnly="permissions.CLOSE_POSTS">
+    {{"FORUM_ACTIONS.CLOSE_POSTS" | transloco }}
+  </button>
+
+  } }
+</div>

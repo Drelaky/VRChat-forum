@@ -1,0 +1,59 @@
+// Images path
+$images-path: "/assets/images/";
+
+// Wrapper width
+$global-wrapper-width: 1320px;
+
+// Font Family
+$font-family: "Poppins";
+
+$font-1st: "Pridi";
+$font-2nd: "Poppins";
+
+// Colors
+$background: #f9f9f9;
+$card-bg: #ffffff;
+$text: #212121;
+$heading: #111111;
+$link: #1e88e5;
+$link-hover: #1565c0;
+$border: #e0e0e0;
+$accent: #6200ea;
+$button-bg: #e0e0e0;
+$button-text: #212121;
+
+$light-theme: (
+  background: #f9f9f9,
+  card-bg: #ffffff,
+  text: #212121,
+  heading: #111111,
+  link: #1e88e5,
+  link-hover: #1565c0,
+  border: #e0e0e0,
+  accent: #6200ea,
+  button-bg: #e0e0e0,
+  button-text: #212121,
+);
+
+$dark-theme: (
+  background: #121212,
+  card-bg: #1e1e1e,
+  text: #e0e0e0,
+  heading: #ffffff,
+  link: #64b5f6,
+  link-hover: #90caf9,
+  border: #2a2a2a,
+  accent: #bb86fc,
+  button-bg: #2d2d2d,
+  button-text: #ffffff,
+);
+
+//FORUM COLORS
+
+$forum-background: #181a1b;
+$forum-header-background: #000;
+$forum-secondary: #1d2021;
+$forum-main-font: #e8e6e3;
+$forum-secondary-font: #a1988c;
+$forum-accent-color: #818cf8;
+$forum-event-calendar-background: #f88181;

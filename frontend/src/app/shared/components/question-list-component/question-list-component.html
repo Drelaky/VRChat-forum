@@ -1,0 +1,26 @@
+@for (question of questions; track $index) {
+<div class="question-container" (click)="openQuestion(question)">
+  <div class="question-detail-container">
+    <h3>{{question.title}}</h3>
+    <div>
+      by {{question.author.name}}, {{question.date | smartDate}} in
+      {{question.altTopic}}
+    </div>
+  </div>
+  <div class="view-reply-container">
+    <p>{{question.replies}} replies</p>
+    <p>{{question.views}} views</p>
+  </div>
+  <div class="author-container">
+    <p>{{question.author.name}}</p>
+    <p>{{question.date | smartDate}}</p>
+  </div>
+  <div class="solved-container">
+    <fa-icon size="lg" [icon]="false ? faStar : faStarPro"></fa-icon>
+    <fa-icon
+      size="lg"
+      [icon]="false ? faCircleCheck : faCircleCheckPro"
+    ></fa-icon>
+  </div>
+</div>
+}

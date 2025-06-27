@@ -1,0 +1,9 @@
+<nav>
+  @for (breadcrumb of breadcrumbs; track $index) { @if(!$last) {
+  <a [routerLink]="breadcrumb.url" (click)="reset()"
+    >{{ breadcrumb.label | transloco }}</a
+  >
+  / } @else {
+  <ng-container> {{ breadcrumb.label | transloco }} </ng-container>
+  } }
+</nav>

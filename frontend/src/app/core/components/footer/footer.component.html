@@ -1,0 +1,15 @@
+<footer>
+  <img src="assets/images/logo-full_white.png" alt="footer-logo" />
+  <div class="container">
+    @for (item of footerItems; track $index) {
+    <div class="category">
+      <h2>{{ item.title | transloco }}</h2>
+      <div class="action-container">
+        @for (action of item.actions; track $index) {
+        <a>{{ action.title | transloco }}</a>
+        }
+      </div>
+    </div>
+    }
+  </div>
+</footer>

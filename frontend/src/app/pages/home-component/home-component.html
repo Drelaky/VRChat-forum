@@ -1,0 +1,17 @@
+<div class="background"></div>
+<div class="container">
+  <h1>{{ 'HOME.TITLE' | transloco }}</h1>
+  <h5>{{ 'HOME.DESCRIPTION' | transloco }}</h5>
+  <app-input
+    [placeholder]="'HOME.INPUT_PLACEHOLDER' | transloco"
+    [icon]="iconSearch"
+    [control]="searchControl"
+    (keydown.enter)="searchForum()"
+  ></app-input>
+</div>
+<div class="forum-info-container">
+  <p><strong>0</strong> {{ 'HOME.DATA_TOPIC' | transloco }}</p>
+  <p><strong>0</strong> {{ 'HOME.DATA_ANSWER' | transloco }}</p>
+  <p><strong>0</strong> {{ 'HOME.DATA_REGISTERED_USERS' | transloco }}</p>
+</div>
+<app-topics></app-topics>
