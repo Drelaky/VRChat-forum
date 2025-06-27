@@ -1,0 +1,24 @@
+@use "shared" as *;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  flex-grow: 1;
+  background: $forum-background;
+
+  .content-container {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    max-width: calc(100% - 30px);
+
+    .another-information-container {
+      width: 280px;
+      padding-inline-start: 20px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="blur-background"></div>
+  <div class="card">
+    <div class="card-header">
+      <h1>{{'LOGIN.TITLE' | transloco}}</h1>
+    </div>
+    <div class="card-body">
+      <app-input
+        [placeholder]="'LOGIN.LOGIN_EMAIL_PLACEHOLDER' | transloco"
+        [icon]="iconEmail"
+        [control]="loginForm.controls.email"
+      ></app-input>
+      <app-input
+        [placeholder]="'LOGIN.LOGIN_PASSWORD_PLACEHOLDER' | transloco"
+        [icon]="iconPassword"
+        [type]="'password'"
+        [control]="loginForm.controls.password"
+      ></app-input>
+      <button (click)="login()">{{'LOGIN.LOGIN_BUTTON' | transloco}}</button>
+      <p class="register-link">
+        {{'LOGIN.LOGIN_QUESTION' | transloco}}
+        <a href="/register">{{'LOGIN.LOGIN_REGISTER_LINK' | transloco}}</a>
+      </p>
+    </div>
+  </div>
+</div>

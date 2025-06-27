@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="badge-container">
+    @if(dummyQuestion.soled) {
+    <div class="solved-badge">Solved</div>
+    } @else {
+    <div class="badge">Question</div>
+    }
+  </div>
+  <h1>{{dummyQuestion.title}}</h1>
+
+  <div class="question-data-container">
+    <p class="question-data-text">{{dummyQuestion.date | smartDate}}</p>
+    <p class="question-data-text">{{dummyQuestion.replies}} replies</p>
+    <p class="question-data-text">{{dummyQuestion.views}} views</p>
+  </div>
+</div>
+
+<div [innerHTML]="dummyQuestion.html | safe: 'html'"></div>
+<app-anwers [replies]="dummyQuestion.replies"></app-anwers>

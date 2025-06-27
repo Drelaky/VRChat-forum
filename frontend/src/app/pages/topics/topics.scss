@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 30px;
+
+  h1 {
+    margin-block-end: 20px;
+  }
+
+  .topics-list-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .topic-card {
+      display: flex;
+      padding: 10px;
+      flex-direction: column;
+      justify-content: start;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+
+      &:hover {
+        background-color: #363636;
+        cursor: pointer;
+      }
+    }
+  }
+}

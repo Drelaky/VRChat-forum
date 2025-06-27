@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@use "shared" as *;
+@use "base";
+
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+@use "base/fonts";
+
+body {
+  @include theme($light-theme);
+}
+
+body.dark {
+  @include theme($dark-theme);
+}

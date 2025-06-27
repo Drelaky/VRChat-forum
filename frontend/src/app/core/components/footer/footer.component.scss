@@ -1,0 +1,38 @@
+@use "shared" as *;
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background: #000;
+  padding-block: 40px;
+
+  img {
+    object-fit: contain;
+  }
+
+  .container {
+    display: flex;
+    gap: 40px;
+
+    .category {
+      padding-block-end: 20px;
+
+      h2 {
+        margin-block-end: 20px;
+      }
+
+      .action-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        a {
+          &:hover {
+            cursor: pointer;
+            color: $forum-accent-color;
+          }
+        }
+      }
+    }
+  }
+}

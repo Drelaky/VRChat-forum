@@ -1,0 +1,74 @@
+{
+  "HOME": {
+    "TITLE": "Ungarische VRChat-Community",
+    "DESCRIPTION": "Fühlen Sie sich frei, Fragen zu stellen, mehr über VRChat zu erfahren und Antworten auf alle Ihre VRChat-bezogenen Anfragen zu erhalten!",
+    "INPUT_PLACEHOLDER": "Suchen oder stellen Sie Ihre Frage",
+    "DATA_TOPIC": "Kategorie",
+    "DATA_ANSWER": "Antworten",
+    "DATA_REGISTERED_USERS": "Registrierte Benutzer"
+  },
+  "HEADER": {
+    "LOGIN_BUTTON": "Anmelden",
+    "LOGOUT_BUTTON": "Abmelden"
+  },
+  "LOGIN": {
+    "TITLE": "Anmelden",
+    "LOGIN_BUTTON": "Anmelden",
+    "LOGIN_EMAIL_PLACEHOLDER": "E-Mail-Adresse",
+    "LOGIN_PASSWORD_PLACEHOLDER": "Passwort",
+    "LOGIN_REGISTER_LINK": "Registrieren",
+    "LOGIN_QUESTION": "Noch kein Mitglied? "
+  },
+  "REGISTER": {
+    "TITLE": "Registrieren",
+    "REGISTER_BUTTON": "Registrieren",
+    "REGISTER_EMAIL_PLACEHOLDER": "E-Mail-Adresse",
+    "REGISTER_PASSWORD_PLACEHOLDER": "Passwort",
+    "REGISTER_CONFIRM_PASSWORD_PLACEHOLDER": "Passwort bestätigen",
+    "REGISTER_LOGIN_LINK": "Anmelden",
+    "REGISTER_QUESTION": "Haben Sie bereits ein Konto? "
+  },
+  "INPUT_ERRORS": {
+    "REQUIRED": "Dieses Feld ist erforderlich.",
+    "INVALID_EMAIL": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "PASSWORD": "Das Passwort muss mindestens 6 Zeichen lang sein.",
+    "CONFIRM_PASSWORD": "Die Passwortbestätigung stimmt nicht überein.",
+    "MINLENGTH": "Das Feld muss mindestens 8 Zeichen lang sein."
+  },
+  "BREADCRUMBS": {
+    "BREADCRUMBS.HOME": "Startseite",
+    "BREADCRUMBS.FORUM": "Forum",
+    "BREADCRUMBS.SEARCH": "Suche"
+  },
+  "FORUM_HEADER": {
+    "FORUM_SEARCH_PLACEHOLDER": "In der Community suchen",
+    "FORUM_LAST_ACTIVITY_BUTTON_TITLE": "Letzte Aktivitäten"
+  },
+  "FOOTER": {
+    "FOOTER_SUPPORT": {
+      "TITLE": "Hilfe",
+      "ACTIONS": {
+        "CONTACT_US": "Kontakt"
+      }
+    },
+    "FOOTER_RESOURCES": {
+      "TITLE": "Ressourcen",
+      "ACTIONS": {
+        "TERMS_OF_SERVICE": "Nutzungsbedingungen",
+        "PRIVACY_POLICY": "Datenschutzrichtlinie"
+      }
+    }
+  },
+  "EVENTS": {
+    "TITLE": "Veranstaltungskalender",
+    "LOAD_MORE_EVENT_BUTTON_TITLE": "Mehr Veranstaltungen laden."
+  },
+  "FORUM_MAIN_PAGE": {
+    "TITLE": "Forum"
+  },
+  "FORUM_ACTIONS": {
+    "ASK_YOUR_QUESTION_BUTTON": "Stelle deine Frage",
+    "CREATE_NEW_TOPIC_BUTTON": "Neues Thema erstellen",
+    "CREATE_NEW_SUB_TOPIC": "Neues Nebenthema erstellen"
+  }
+}

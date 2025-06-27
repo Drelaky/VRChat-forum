@@ -1,0 +1,41 @@
+<div class="header-container">
+  <p>{{replies}} replies</p>
+</div>
+<div class="container">
+  @for (answer of answers; track $index) {
+  <div class="answers-container">
+    <div class="user-information-container">
+      <div class="user-information">
+        <p>{{answer.title}}</p>
+        <p>{{answer.badge}}</p>
+      </div>
+      <p>{{answer.date | smartDate}}</p>
+    </div>
+    <div class="answer-container">
+      <div [innerHTML]="answer.answer | safe: 'html'"></div>
+    </div>
+  </div>
+
+  <div class="action-container">
+    <div class="button">
+      <p>0</p>
+      <fa-icon [icon]="faThumbsUp"></fa-icon>
+      <p>Like</p>
+    </div>
+  </div>
+  }
+</div>
+
+<div class="reply-container">
+  <h3>Reply</h3>
+  <div class="NgxEditor__Wrapper">
+    <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+    <ngx-editor
+      [editor]="editor"
+      [(ngModel)]="html"
+      [disabled]="false"
+      [placeholder]="'Írj le a véleményed...'"
+    ></ngx-editor>
+  </div>
+  <button (click)="saveAnswer()">Send</button>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Topics</h1>
+
+  <div class="topics-list-container">
+    @for (topic of topics; track $index) {
+    <div class="topic-card">
+      <h2>{{ topic.name }}</h2>
+      <p>Posts: {{ topic.posts }}</p>
+    </div>
+    }
+  </div>
+</div>

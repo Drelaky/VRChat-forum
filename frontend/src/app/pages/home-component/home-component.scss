@@ -1,0 +1,36 @@
+.background {
+  background: url("/assets/images/background.png") no-repeat center center fixed;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(2px);
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 146px);
+  position: relative;
+
+  app-input {
+    width: 600px;
+  }
+}
+
+.forum-info-container {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  background: black;
+  padding-block: 10px;
+
+  p {
+    line-height: unset;
+    font-size: 30px;
+  }
+}

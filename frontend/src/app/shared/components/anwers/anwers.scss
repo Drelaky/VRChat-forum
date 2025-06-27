@@ -1,0 +1,44 @@
+.header-container {
+  border-block-start: 1px solid gray;
+  border-inline: 1px solid gray;
+  padding: 20px;
+  margin-block-start: 20px;
+}
+
+.container {
+  border: 1px solid gray;
+  padding: 20px;
+
+  .answers-container {
+    display: flex;
+    flex-direction: column;
+
+    .user-information-container {
+      display: inherit;
+      gap: 30px;
+      justify-content: space-between;
+
+      .user-information {
+        display: inherit;
+        gap: 30px;
+      }
+    }
+    .answer-container {
+      margin-block: 10px;
+      max-width: 998px;
+    }
+  }
+
+  .action-container {
+    display: flex;
+    border-bottom: 1px solid gray;
+    margin-block-end: 20px;
+    padding-block-end: 20px;
+
+    .button {
+      display: inherit;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<div class="current-language-container" (click)="openDropdown()">
+  <div class="lang-name">{{ currentLang.name }}</div>
+  <fa-icon
+    [icon]="faAngleUp"
+    [ngClass]="{ 'dropdown-open': dropdown }"
+  ></fa-icon>
+</div>
+
+@if (dropdown) {
+<div class="backdrop" (click)="openDropdown()"></div>
+<div class="dropdown">
+  @for (lang of langs; track $index) {
+  <div class="lang-container" (click)="changeLanguage(lang.lang)">
+    <div class="lang-name">{{ lang.name }}</div>
+  </div>
+  }
+</div>
+}

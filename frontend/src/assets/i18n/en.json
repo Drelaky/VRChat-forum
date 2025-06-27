@@ -1,0 +1,74 @@
+{
+  "HOME": {
+    "TITLE": "Hungarian VRChat Community",
+    "DESCRIPTION": "Feel free to ask questions, learn about VRChat, and get answers to all your VRChat-related inquiries!",
+    "INPUT_PLACEHOLDER": "Search or ask your question",
+    "DATA_TOPIC": "Categorys",
+    "DATA_ANSWER": "Answers",
+    "DATA_REGISTERED_USERS": "Registered Users"
+  },
+  "HEADER": {
+    "LOGIN_BUTTON": "Login",
+    "LOGOUT_BUTTON": "Logout"
+  },
+  "LOGIN": {
+    "TITLE": "Login",
+    "LOGIN_BUTTON": "Login",
+    "LOGIN_EMAIL_PLACEHOLDER": "Email Address",
+    "LOGIN_PASSWORD_PLACEHOLDER": "Password",
+    "LOGIN_REGISTER_LINK": "Register",
+    "LOGIN_QUESTION": "Not a member yet? "
+  },
+  "REGISTER": {
+    "TITLE": "Register",
+    "REGISTER_BUTTON": "Register",
+    "REGISTER_EMAIL_PLACEHOLDER": "Email Address",
+    "REGISTER_PASSWORD_PLACEHOLDER": "Password",
+    "REGISTER_CONFIRM_PASSWORD_PLACEHOLDER": "Confirm Password",
+    "REGISTER_LOGIN_LINK": "Login",
+    "REGISTER_QUESTION": "Already have an account? "
+  },
+  "INPUT_ERRORS": {
+    "REQUIRED": "This field is required.",
+    "INVALID_EMAIL": "Please enter a valid email address.",
+    "PASSWORD": "Password must be at least 6 characters long.",
+    "CONFIRM_PASSWORD": "Password confirmation does not match.",
+    "MINLENGTH": "The field must be at least 8 characters long."
+  },
+  "BREADCRUMBS": {
+    "BREADCRUMBS.HOME": "Home",
+    "BREADCRUMBS.FORUM": "Forum",
+    "BREADCRUMBS.SEARCH": "Search"
+  },
+  "FORUM_HEADER": {
+    "FORUM_SEARCH_PLACEHOLDER": "Search the community",
+    "FORUM_LAST_ACTIVITY_BUTTON_TITLE": "Recent Activities"
+  },
+  "FOOTER": {
+    "FOOTER_SUPPORT": {
+      "TITLE": "Support",
+      "ACTIONS": {
+        "CONTACT_US": "Contact Us"
+      }
+    },
+    "FOOTER_RESOURCES": {
+      "TITLE": "Resources",
+      "ACTIONS": {
+        "TERMS_OF_SERVICE": "Terms of Service",
+        "PRIVACY_POLICY": "Privacy Policy"
+      }
+    }
+  },
+  "EVENTS": {
+    "TITLE": "Events calendar",
+    "LOAD_MORE_EVENT_BUTTON_TITLE": "Load more events."
+  },
+  "FORUM_MAIN_PAGE": {
+    "TITLE": "Forum"
+  },
+  "FORUM_ACTIONS": {
+    "ASK_YOUR_QUESTION_BUTTON": "Ask your question",
+    "CREATE_NEW_TOPIC_BUTTON": "Create new topic",
+    "CREATE_NEW_SUB_TOPIC": "Create new sub-topic"
+  }
+}

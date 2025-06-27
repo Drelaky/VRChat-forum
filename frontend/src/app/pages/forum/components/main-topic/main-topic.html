@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="forum-container">
+    <div class="forum-category-container">
+      @if(mainTopic) { @if(isAltTopic) {
+      <h1>{{altTopic?.title}}</h1>
+      <p>{{altTopic?.description}}</p>
+      } @else {
+      <h1>{{mainTopic.title}}</h1>
+      <div class="forum-category">
+        @for (topic of mainTopic.altCategory; track $index) {
+        <div class="category" (click)="goToTopic(topic)">
+          <h2>{{ topic.title }}</h2>
+          <fa-icon [icon]="faArrowRight"></fa-icon>
+        </div>
+        }
+      </div>
+      }}
+    </div>
+  </div>
+  <app-question-list-component></app-question-list-component>
+</div>

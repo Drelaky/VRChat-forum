@@ -1,0 +1,22 @@
+:host {
+  flex-grow: 1;
+}
+
+.container {
+  app-input {
+    display: block;
+    width: 280px;
+  }
+
+  .input-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-block: 35px 50px;
+  }
+
+  .language-input-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="container">
+  <h4>{{'EVENTS.TITLE' | transloco }}</h4>
+
+  <div class="events-container">
+    @for (event of events.slice(0, 3); track $index) {
+    <div class="event">
+      <div class="date-container">
+        <div class="month">{{ event.date | localizedDate }}</div>
+        <div class="day">{{ event.date | date: 'dd' }}</div>
+      </div>
+      <div class="event-information-container">
+        <h6>{{ event.title}}</h6>
+        <p>{{ event.description }}</p>
+      </div>
+    </div>
+    } @if (events.length > 3) {
+    <p class="more-events">
+      {{ 'EVENTS.LOAD_MORE_EVENT_BUTTON_TITLE' | transloco}}
+    </p>
+    }
+  </div>
+</div>

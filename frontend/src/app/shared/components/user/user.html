@@ -1,0 +1,19 @@
+@if(!loggedInUser) {
+<button
+  class="button"
+  (click)="discordLogin()"
+  mat-raised-button
+  color="primary"
+>
+  Bejelentkezés
+</button>
+
+} @else { @if(loggedInUser.img) {
+<img [src]="loggedInUser.img" (click)="openDropdown()" class="profile-icon" />
+
+} } @if(isOpenDropdown) {
+<div class="dropdown-backdrop" (click)="openDropdown()"></div>
+<div class="dropdown-container">
+  <p class="dropdown-element" (click)="logout()">logout</p>
+</div>
+}

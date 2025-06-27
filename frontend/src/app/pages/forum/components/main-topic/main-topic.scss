@@ -1,0 +1,35 @@
+@use "shared" as *;
+
+:host {
+  flex-grow: 1;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+
+  .forum-container {
+    width: 100%;
+    .forum-category-container {
+      background-color: $forum-secondary;
+
+      h1 {
+        padding: 30px;
+      }
+
+      .forum-category {
+        gap: 5px;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+
+        .category {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}

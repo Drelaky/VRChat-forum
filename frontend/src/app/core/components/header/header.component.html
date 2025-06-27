@@ -1,0 +1,13 @@
+<div class="container" [class.main-page]="!isMainPage()">
+  <img
+    src="/assets/images/logo-full_white.png"
+    alt="logo"
+    [routerLink]="['/']"
+  />
+  <div class="button-container">
+    <app-change-language-component></app-change-language-component>
+    <div>
+      <app-user></app-user>
+    </div>
+  </div>
+</div>

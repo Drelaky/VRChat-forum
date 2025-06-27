@@ -1,0 +1,31 @@
+:host {
+  flex-grow: 1;
+}
+
+.container {
+  .badge-container {
+    width: fit-content;
+
+    .badge,
+    .solved-badge {
+      padding: 5px;
+      border-radius: 10px;
+    }
+
+    .badge {
+      background: rgb(255, 145, 0);
+    }
+
+    .solved-badge {
+      background: greenyellow;
+    }
+  }
+
+  .question-data-container {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid gray;
+    padding-block-end: 20px;
+    margin-block-end: 20px;
+  }
+}

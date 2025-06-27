@@ -1,0 +1,21 @@
+@use "shared" as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid #3b4043;
+  border-radius: 8px;
+  gap: 30px;
+
+  button {
+    background: $forum-accent-color;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+}
