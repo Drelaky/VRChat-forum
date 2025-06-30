@@ -1,4 +1,4 @@
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import {
   ApplicationConfig,
   importProvidersFrom,
@@ -18,6 +18,7 @@ import { NgxPermissionsModule } from 'ngx-permissions';
 import { firstValueFrom, tap } from 'rxjs';
 import { routes } from './app.routes';
 import { TranslocoHttpLoader } from './transloco-loader';
+import { apiInterceptor } from './core/interceptors/api.interceptor';
 
 export function initTransloco(): Promise<Translation> {
   const transloco = inject(TranslocoService);
@@ -37,11 +38,19 @@ export function initTransloco(): Promise<Translation> {
   );
 }
 
+import localeHu from '@angular/common/locales/hu';
+import localeDe from '@angular/common/locales/de';
+import localeEn from '@angular/common/locales/en';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localeHu);
+registerLocaleData(localeDe);
+registerLocaleData(localeEn);
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideHttpClient(),
     provideAnimations(),
     provideTransloco({
       config: {
@@ -55,5 +64,6 @@ export const appConfig: ApplicationConfig = {
     }),
     provideAppInitializer(initTransloco),
     importProvidersFrom(NgxPermissionsModule.forRoot()),
+    provideHttpClient(withInterceptors([apiInterceptor])),
   ],
 };

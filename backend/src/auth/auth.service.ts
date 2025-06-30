@@ -6,12 +6,17 @@ import * as config from '../config.json';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Auth } from './entities/auth.entity';
 import { Repository } from 'typeorm';
+import { Role } from '@app/roles/entities/role.entity';
 
 @Injectable()
 export class AuthService {
   constructor(
     @InjectRepository(Auth)
     private authDB: Repository<Auth>,
+
+    @InjectRepository(Role)
+    private roleDB: Repository<Role>,
+
     private readonly httpService: HttpService,
   ) {}
 
@@ -58,7 +63,7 @@ export class AuthService {
             let data = res.data;
             if (!data.avatar) {
               this.authDB.save({
-                username: data.global_name,
+                username: data.global_name ?? data.username,
                 discordID: data.id,
                 img: null,
                 theme: 'dark',
@@ -68,20 +73,31 @@ export class AuthService {
             const foundUser = await this.authDB.findOne({
               where: {
                 discordID: data.id,
-                username: data.global_name,
+                username: data.global_name ?? data.username,
               },
             });
 
+            const foundGuestRole = await this.roleDB.findOne({
+              where: {
+                name: 'User',
+              },
+            });
+
+            if (!foundGuestRole) {
+              return;
+            }
+
             if (foundUser) {
               await this.authDB.update(foundUser.id, {
-                username: data.global_name,
+                username: data.global_name ?? data.username,
                 img: `https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.webp?size=80`,
               });
             } else {
               await this.authDB.save({
-                username: data.global_name,
+                username: data.global_name ?? data.username,
                 discordID: data.id,
                 img: `https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}.webp?size=80`,
+                role: foundGuestRole,
                 theme: 'dark',
               });
             }
@@ -90,6 +106,9 @@ export class AuthService {
               where: { username: data.global_name, discordID: data.id },
               relations: ['role'],
             });
+
+            console.log(fullUser);
+
             return fullUser;
           }),
           catchError((error) => {

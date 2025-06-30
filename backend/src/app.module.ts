@@ -1,16 +1,15 @@
 import { Module } from '@nestjs/common';
+import { RouterModule } from '@nestjs/core';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import * as databaseConfig from './config.json';
-import { RouterModule } from '@nestjs/core';
 import { AuthModule } from './auth/auth.module';
-import { UserModule } from './user/user.module';
-import { ForumCategoryModule } from './forum-category/forum-category.module';
+import * as databaseConfig from './config.json';
 import { ForumAltCategoryModule } from './forum-alt-category/forum-alt-category.module';
+import { ForumCategoryModule } from './forum-category/forum-category.module';
 import { ForumPostModule } from './forum-post/forum-post.module';
-import { RolesModule } from './roles/roles.module';
 import { PermissionModule } from './permission/permission.module';
+import { RolesModule } from './roles/roles.module';
 
 @Module({
   imports: [
@@ -54,7 +53,6 @@ import { PermissionModule } from './permission/permission.module';
       },
     ]),
     AuthModule,
-    UserModule,
     ForumCategoryModule,
     ForumAltCategoryModule,
     ForumPostModule,

@@ -109,9 +109,4 @@ export class BreadcrumbService {
 
     return result;
   }
-
-  private updateBreadcrumbs(lang: string) {
-    const breadcrumbs = this.createBreadcrumbs(this.activatedRoute.root, lang);
-    this.breadcrumbsSubject.next(breadcrumbs);
-  }
 }
