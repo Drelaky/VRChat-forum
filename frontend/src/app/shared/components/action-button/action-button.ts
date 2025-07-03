@@ -21,30 +21,30 @@ export class ActionButton {
   buttons = [
     {
       title: 'FORUM_ACTIONS.ASK_YOUR_QUESTION_BUTTON',
-      url: ['/', 'forum'],
+      url: ['/', 'forum', 'ask-your-question'],
       permission: this.permissions.CREATE_POST,
-      deniedUrl: [],
+      deniedUrl: ['ask-your-question'],
       urlAllow: 0,
     },
     {
       title: 'FORUM_ACTIONS.CREATE_EVENT',
       url: ['/', 'forum'],
       permission: this.permissions.CREATE_EVENT,
-      deniedUrl: ['create-main-category'],
+      deniedUrl: ['create-main-category', 'ask-your-question'],
       urlAllow: 0,
     },
     {
       title: 'FORUM_ACTIONS.EDIT_POSTS',
       url: ['/', 'forum'],
       permission: this.permissions.EDIT_POSTS,
-      deniedUrl: ['create-main-category'],
+      deniedUrl: ['create-main-category', 'ask-your-question'],
       urlAllow: 0,
     },
     {
       title: 'FORUM_ACTIONS.EDIT_OWNER_POST',
       url: ['/', 'forum'],
       permission: this.permissions.EDIT_OWNER_POST,
-      deniedUrl: ['create-main-category'],
+      deniedUrl: ['create-main-category', 'ask-your-question'],
       urlAllow: 0,
     },
   ];

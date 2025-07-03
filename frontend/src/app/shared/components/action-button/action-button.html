@@ -12,7 +12,8 @@
   >
     {{"FORUM_ACTIONS.CREATE_NEW_TOPIC_BUTTON" | transloco }}
   </button>
-  } @case (3) { @if(currentUrl !== 'create-main-category') {
+  } @case (3) { @if(currentUrl !== 'create-main-category' && currentUrl !==
+  'ask-your-question') {
   <button
     *ngxPermissionsOnly="permissions.CREATE_ALTCATEGORY"
     [routerLink]="['/', 'forum', currentUrl,'create-sub-topic']"

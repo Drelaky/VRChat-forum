@@ -44,6 +44,14 @@ export const routes: Routes = [
               ).then((m) => m.CreateNewTopic),
           },
           {
+            path: 'ask-your-question',
+            data: { title: 'BREADCRUMBS.BREADCRUMBS.ASK-YOUR-QUESTION' },
+            loadComponent: () =>
+              import('./shared/components/ask-question/ask-question').then(
+                (m) => m.AskQuestion
+              ),
+          },
+          {
             path: ':category/create-sub-topic',
             data: { title: 'BREADCRUMBS.BREADCRUMBS.CREATE-SUB-TOPIC' },
             loadComponent: () =>
