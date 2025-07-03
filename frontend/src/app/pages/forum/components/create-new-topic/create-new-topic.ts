@@ -55,7 +55,7 @@ export class CreateNewTopic
   }
 
   saveMainCategory(): void {
-    if (this.currentUrl === 'create-main-topic') {
+    if (this.currentUrl === 'create-main-category') {
       this.apiService
         .saveMainCategory(this.formGroup)
         .pipe(takeUntil(this.destroy$))
