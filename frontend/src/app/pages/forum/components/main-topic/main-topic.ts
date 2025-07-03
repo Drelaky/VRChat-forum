@@ -47,6 +47,7 @@ export class MainTopic extends WithDestroyObservable(Object) implements OnInit {
     this.fourmService.CurrentAltCategory.pipe(
       takeUntil(this.destroy$)
     ).subscribe((o) => {
+      console.log(o);
       if (o) {
         this.altCategoryId = o.id;
       }
@@ -73,6 +74,7 @@ export class MainTopic extends WithDestroyObservable(Object) implements OnInit {
 
   goToTopic(topic: AltCategory): void {
     this.isAltTopic = true;
+    this.altCategoryId = topic.id;
     this.router.navigate(['/', 'forum', this.mainTopic?.url, topic.url], {
       state: {
         altTopic: topic,
