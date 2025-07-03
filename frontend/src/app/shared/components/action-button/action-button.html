@@ -8,11 +8,11 @@
   } } @switch (urlLogic) { @case (2) {
   <button
     *ngxPermissionsOnly="permissions.CREATE_MAINCATEGORY"
-    [routerLink]="['/', 'forum', 'create-main-topic']"
+    [routerLink]="['/', 'forum', 'create-main-category']"
   >
     {{"FORUM_ACTIONS.CREATE_NEW_TOPIC_BUTTON" | transloco }}
   </button>
-  } @case (3) { @if(currentUrl !== 'create-main-topic') {
+  } @case (3) { @if(currentUrl !== 'create-main-category') {
   <button
     *ngxPermissionsOnly="permissions.CREATE_ALTCATEGORY"
     [routerLink]="['/', 'forum', currentUrl,'create-sub-topic']"

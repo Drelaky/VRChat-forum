@@ -36,6 +36,22 @@ export const routes: Routes = [
               ),
           },
           {
+            path: 'create-main-category',
+            data: { title: 'BREADCRUMBS.BREADCRUMBS.CREATE-MAIN-CATEGORY' },
+            loadComponent: () =>
+              import(
+                './pages/forum/components/create-new-topic/create-new-topic'
+              ).then((m) => m.CreateNewTopic),
+          },
+          {
+            path: ':category/create-sub-topic',
+            data: { title: 'BREADCRUMBS.BREADCRUMBS.CREATE-SUB-TOPIC' },
+            loadComponent: () =>
+              import(
+                './pages/forum/components/create-new-topic/create-new-topic'
+              ).then((m) => m.CreateNewTopic),
+          },
+          {
             path: 'search',
             loadComponent: () =>
               import('./pages/search/search').then((m) => m.Search),
@@ -71,7 +87,6 @@ export const routes: Routes = [
       },
     ],
   },
-
   {
     path: '404',
     pathMatch: 'full',
